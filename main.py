@@ -23,9 +23,15 @@ morse_map = {
     "W": ".--",
     "X": "-..-",
     "Y": "-.--",
-    "Z": "--.."
+    "Z": "--..",
+    " ": " / "
 }
 
 text = input("Enter some text to get equivalent morse code of it: ")
 
-print(text)
+morse_code = ""
+for letter in text.upper():
+    if letter in morse_map:
+        morse_code += morse_map.get(letter)
+
+print(morse_code)
